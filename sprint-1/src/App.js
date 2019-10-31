@@ -1,10 +1,15 @@
 import React from 'react';
 import './styles/App.scss';
+import Header from './components/header/Header';
 
-function App() {
-  return (
-    <h1>Let`s get started!</h1>
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <Header />
+    )
+  }
+    
+
 }
 
 export default App;
