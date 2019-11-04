@@ -1,0 +1,26 @@
+@import '../../styles/base.scss';
+
+.user-image {
+    @include mobile() {
+        margin-left: 16px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    @include tablet() {
+        margin-left: 140px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        padding-top: 10px;
+    }
+
+    @include desktop() {
+        margin-left: 140px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        padding-top: 10px;
+    }
+}
