@@ -2,8 +2,6 @@ import React from 'react';
 import './App.scss';
 import Button from './components/Button/Button';
 import UserImage from './components/UserImage/UserImage'
-// import headShot from "./assets/Images/Mohan-muruge.jpg";
-// import Header from './components/header/Header';
 
 class App extends React.Component {
   render() {
