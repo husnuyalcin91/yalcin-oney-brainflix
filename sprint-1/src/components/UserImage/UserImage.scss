@@ -2,7 +2,8 @@
 
 .user-image {
     @include mobile() {
-        margin-left: 16px;
+
+        margin: 8px 0 0 16px;
         width: 40px;
         height: 40px;
         border-radius: 50%;

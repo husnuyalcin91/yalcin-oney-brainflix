@@ -12,12 +12,12 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <div>
-          <img src="./assets/logo/logo-brainflix.svg" alt="site logo" />
+        <div className="header">
+          <img className ="header__logo" src="./assets/logo/logo-brainflix.svg" alt="site logo" />
           <InputBar />
-          <div>
+          <div className="header__button-image-container">
             <Button text="UPLOAD" />
-            <UserImage imgSrc="./assets/Images/Mohan-muruge.jpg" altTxt="user" />
+            <UserImage className="header__user-image" imgSrc="./assets/Images/Mohan-muruge.jpg" altTxt="user" />
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import './InputBar.scss';
 
 const InputBar = () => {
     return (
-        <input type="text" placeholder="Search" name="name" value=""></input>
+        <input className="header__input-bar" type="text" placeholder="Search" name="name" value=""></input>
     )
 }
 
