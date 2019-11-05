@@ -1,7 +1,12 @@
 import React from 'react';
 import './App.scss';
 import Button from './components/Button/Button';
-import UserImage from './components/UserImage/UserImage'
+import UserImage from './components/UserImage/UserImage';
+import InputBar from './components/InputBar/InputBar';
+import TextArea from './components/TextArea/TextArea';
+// import Comments from './components/Comments/Comments';
+// import Aside from './components/Aside/Aside';
+// import HeroInfo from './components/HeroInfo/HeroInfo'
 
 class App extends React.Component {
   render() {
@@ -9,7 +14,7 @@ class App extends React.Component {
       <>
         <div>
           <img src="./assets/logo/logo-brainflix.svg" alt="site logo" />
-          <input type="text" placeholder="Search" name="name" value=""></input>
+          <InputBar />
           <div>
             <Button text="UPLOAD" />
             <UserImage imgSrc="./assets/Images/Mohan-muruge.jpg" altTxt="user" />
@@ -17,14 +22,17 @@ class App extends React.Component {
         </div>
 
         <div>
-          <video />
+          <video> 
+
+          </video>
         </div>
         
         <div>
           <section>
+            {/* <HeroInfo /> */}
+            {/* will replace the code below */}
             <h1>BMX Rampage: 2018 Highlights</h1>
             <h4>By Red Cow 12/18/2018</h4>
-            {/* views and likes */}
             <p>On a gusty day in Southern Utah, a group of 25
             daring mountain bikers blew the doors off what is
             possible on two wheels, unleashing some of the
@@ -40,28 +48,23 @@ class App extends React.Component {
             <h4>3 Comments</h4>
             <div>
             <UserImage imgSrc="./assets/Images/Mohan-muruge.jpg" altTxt="user" />
-              <textarea type="text" placeholder="Write comment here" name="name" value=""></textarea>
+              <TextArea />
               <Button text='COMMENT' />
             </div>
-            {/* comments come here */}
+
+            <section>
+              {/* <Comments /> */}
+            </section>
+            
           </div>
 
-          <aside>
             <h5>NEXT VIDEO</h5>
-            <div>
-              <img alt="whatever"></img>
-              <div>
-                <h4>Become A Travel Pro In One Easy Lesson for</h4>
-                <h6>Scotty Cranmer</h6>
-              </div>
-            </div>
-          </aside>
+
+            {/* <Aside /> */}
         </div>
       </>
     )
   }
-    
-
 }
 
 export default App;

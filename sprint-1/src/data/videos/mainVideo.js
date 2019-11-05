@@ -12,7 +12,12 @@ const mainVideo = [
         who won the event for the second time -- eight years
         after his first Red Cow Rampage title`,
         channel: 'By Red Cow',
-        image: '../assets/video-list-0.jpg',
+        image: [
+            {
+                src: '../assets/video-list-0.jpg',
+                alt: 'main video'
+            }
+        ],
         views: [
             {
                 no: '1,001,023',
@@ -31,9 +36,7 @@ const mainVideo = [
                 }
             }
         ],
-        // duration: 
-        // video: 
-        timestamp: '12/18/2018', //change to number
+        timestamp: '12/18/2018',
         comments:[
             { name: 'Michael Lyons',
             date: '12/18/2018',
