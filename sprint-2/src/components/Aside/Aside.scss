@@ -1,0 +1,35 @@
+@import '../../styles/base.scss';
+
+.aside {
+    @include mobile() {
+    
+    }
+
+&__image {
+    @include mobile() {
+        width: 120px;
+        height: 70px;
+    }
+}
+
+&__list-container {
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+    }
+}
+
+&__wrapper {
+    @include mobile() {
+        display: flex;
+    }
+}
+
+&__title-channel-holder {
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+    }
+}
+}

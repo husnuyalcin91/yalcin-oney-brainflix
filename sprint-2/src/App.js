@@ -58,12 +58,12 @@ componentDidMount() {
         </div>
 
         <div>
-            <HeroImage mainVideo={this.state.mainVideo} />
+            <HeroImage mainHeroVideo={this.state.mainHeroVideo}/>
         </div>
         
         <div>
           <section>
-            <HeroInfo mainVideo={this.state.mainVideo} />
+            <HeroInfo mainHeroVideo={this.state.mainHeroVideo}/>
           </section>
 
           <div>
@@ -75,7 +75,7 @@ componentDidMount() {
             </div>
 
             <section>
-              <Comments mainVideo={this.state.mainVideo}/>
+              <Comments mainVideo={this.state.mainVideo} mainHeroVideo={this.state.mainHeroVideo}/>
             </section>
             
           </div>

@@ -1,0 +1,8 @@
+@import '../../styles/base.scss';
+
+.hero-image {
+    @include mobile() {
+        width: 100%;
+        height: 183px;
+    }
+}

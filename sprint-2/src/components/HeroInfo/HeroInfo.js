@@ -4,9 +4,9 @@ import './HeroInfo.scss';
 const HeroInfo = (props) => {
     return (
         <>
-            <h1>{props.mainVideo.title}</h1>
-            <h4>{props.mainVideo.title} {props.mainVideo.timestamp}</h4>
-            <p>{props.mainVideo.description}</p>
+            <h1>{props.mainHeroVideo.title}</h1>
+            <h4>{props.mainHeroVideo.channel} {props.mainHeroVideo.timestamp}</h4>
+            <p>{props.mainHeroVideo.description}</p>
         </>
     )
 }
