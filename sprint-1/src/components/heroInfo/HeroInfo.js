@@ -1,5 +1,4 @@
 import React from 'react';
-import { mainVideo } from '../../data/videos/mainVideo';
 import './HeroInfo.scss';
 
 const HeroInfo = (props) => {

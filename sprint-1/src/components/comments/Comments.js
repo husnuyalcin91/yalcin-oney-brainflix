@@ -1,16 +1,11 @@
 import React from 'react';
-import { mainVideo } from '../../data/videos/mainVideo';
 import './Comments.scss'
 
 class Comments extends React.Component {
-    state = {
-        mainVideo: mainVideo
-    }
-
     render () {
     return(
             <div>
-                <img src={this.props.mainVideo.comments.image.src} alt={this.props.mainVideo.comments.image.alt} />
+                <img src={this.props.mainVideo.comments[3]} alt={this.props.mainVideo.comments[3]} />
                 <div>
                     <div>
                         <p>{this.props.mainVideo.comments.name}</p>

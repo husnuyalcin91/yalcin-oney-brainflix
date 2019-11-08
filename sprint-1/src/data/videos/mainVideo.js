@@ -1,4 +1,4 @@
-const mainVideo = [
+const mainVideo = 
     {
         id: '000',
         title: 'BMX Rampage: 2018 Highlights',
@@ -66,6 +66,6 @@ const mainVideo = [
             }
         ]
     }
-];
+
 
 export { mainVideo };

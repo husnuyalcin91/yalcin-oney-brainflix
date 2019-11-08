@@ -1,0 +1,53 @@
+// need to change the paths and link the file to App.js or individual styling files
+
+// font-face
+@font-face {
+    font-family: "Avenir-Regular";
+    src: url("../styles/fonts/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Avenir-Bold";
+    src: url("../styles/fonts/Linotype\ -\ AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Avenir-Demi";
+    src: url("../styles/fonts/Linotype\ -\ AvenirNextLTPro-Demi.otf") format("opentype");
+}
+
+// font variables
+$font-bold: "Avenir-Bold";
+$font-demi: "Avenir-Demi";
+
+// mobile text size and line height variables
+$header-text-mobile: 24px;
+$header-line-mobile: 32px;
+$subheader-text-mobile: 14px;
+$subheader-line-mobile: 22px;
+//paragraphs and lists and contact info have the same text size and line height
+$paragraph-text-mobile: 13px;
+$paragraph-line-mobile: 18px;
+$labels-text-mobile: 12px;
+$labels-line-mobile: 20px;
+
+// tablet and desktop text size and line height variables
+$hero-header-text-desk: 60px;
+$hero-header-line-desk: 68px;
+$header-one-text-desk: 36px;
+$header-one-line-desk: 44px;
+$header-two-text-desk: 24px;
+$header-two-line-desk: 32px;
+$subheader-text-desk: 16px;
+$subheader-line-desk: 24px;
+// lists and contact info text size is the same as paragraph text size
+$paragraph-text-desk: 14px;
+$paragraph-line-desk: 22px;
+$lists-line-desk: 20px;
+$labels-text-desk: 12px;
+$labels-line-desk: 20px;
+
+// media query variables
+$max-mobile-width: 426px;
+$max-tablet-width: 769px;
+$desktop-width: "screen and (min-width: #{$max-tablet-width})";

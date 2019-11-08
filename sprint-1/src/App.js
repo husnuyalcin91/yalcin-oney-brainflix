@@ -1,14 +1,23 @@
 import React from 'react';
 import './App.scss';
+
 import Button from './components/Button/Button';
 import UserImage from './components/UserImage/UserImage';
 import InputBar from './components/InputBar/InputBar';
 import TextArea from './components/TextArea/TextArea';
-// import Comments from './components/Comments/Comments';
-// import Aside from './components/Aside/Aside';
-// import HeroInfo from './components/HeroInfo/HeroInfo'
+import { mainVideo } from './data/videos/mainVideo';
+import { sideVideo } from './data/videos/sideVideo';
+import Comments from './components/Comments/Comments';
+import Aside from './components/Aside/Aside';
+import HeroInfo from './components/HeroInfo/HeroInfo';
+import HeroImage from './components/HeroImage/HeroImage'
 
 class App extends React.Component {
+  state = {
+    mainVideo: mainVideo,
+    sideVideo: sideVideo
+  }
+
   render() {
     return (
       <>
@@ -22,26 +31,12 @@ class App extends React.Component {
         </div>
 
         <div>
-          <video> 
-
-          </video>
+            <HeroImage mainVideo={this.state.mainVideo} />
         </div>
         
         <div>
           <section>
-            {/* <HeroInfo /> */}
-            {/* will replace the code below */}
-            <h1>BMX Rampage: 2018 Highlights</h1>
-            <h4>By Red Cow 12/18/2018</h4>
-            <p>On a gusty day in Southern Utah, a group of 25
-            daring mountain bikers blew the doors off what is
-            possible on two wheels, unleashing some of the
-            biggest moments the sport has ever seen. While
-            mother nature only allowed for one full run before
-            the conditions made it impossible to ride, that was
-            all that was needed for event veteran Kyle Strait,
-            who won the event for the second time -- eight years
-            after his first Red Cow Rampage title</p>
+            <HeroInfo mainVideo={this.state.mainVideo} />
           </section>
 
           <div>
@@ -53,14 +48,14 @@ class App extends React.Component {
             </div>
 
             <section>
-              {/* <Comments /> */}
+              <Comments mainVideo={this.state.mainVideo}/>
             </section>
             
           </div>
 
             <h5>NEXT VIDEO</h5>
 
-            {/* <Aside /> */}
+            <Aside mainVideo={this.state.mainVideo} sideVideo={this.state.sideVideo}/>
         </div>
       </>
     )
