@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import './App.scss';
 // import { BrowserRouter, Route, Link } from 'react-router-dom';
 
@@ -13,11 +14,36 @@ import Aside from './components/Aside/Aside';
 import HeroInfo from './components/HeroInfo/HeroInfo';
 import HeroImage from './components/HeroImage/HeroImage'
 
+//axios - variables
+const apiKey = "87c30414-6f8a-44bb-88fd-32a37998cbdd";
+const url = "https://project-2-api.herokuapp.com";
+
 class App extends React.Component {
   state = {
     mainVideo: mainVideo,
-    sideVideo: sideVideo
+    sideVideo: sideVideo,
+    sideBarVideos: [],
+    mainHeroVideo: []
   }
+
+//axios - get comments
+componentDidMount() {
+  axios.get(`${url}/videos?api_key=${apiKey}`)
+  .then(result => {
+    this.setState({
+      sideBarVideos: result.data
+    });
+      console.log(result.data);
+  })
+
+  axios.get(`${url}/videos/1af0jruup5gu?api_key=${apiKey}`)
+  .then(response => {
+    this.setState({
+      mainHeroVideo: response.data
+    });
+    console.log(response.data);
+  })
+}
 
   render() {
     return (
@@ -56,7 +82,7 @@ class App extends React.Component {
 
             <h5>NEXT VIDEO</h5>
 
-            <Aside mainVideo={this.state.mainVideo} sideVideo={this.state.sideVideo}/>
+            <Aside sideBarVideos={this.state.sideBarVideos} mainHeroVideo={this.state.mainHeroVideo}/>
         </div>
       </>
     )
