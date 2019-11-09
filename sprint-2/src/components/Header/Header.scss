@@ -1,0 +1,21 @@
+@import '../../styles/base.scss';
+
+.header {
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+&__logo {
+    @include mobile() {
+
+    }
+}
+
+&__button-image-container {
+    @include mobile() {
+        display: flex;
+    }
+}
+}

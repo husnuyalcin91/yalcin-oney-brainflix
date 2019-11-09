@@ -3,7 +3,8 @@ import './TextArea.scss';
 
 const TextArea = () => {
     return (
-        <textarea type="text" placeholder="Write comment here" name="name" value=""></textarea>
+        //removed value='' for now to get rid of a failed prop type error
+        <textarea type="text" placeholder="Write comment here" name="name"></textarea>
     )
 }
 

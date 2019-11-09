@@ -1,12 +1,17 @@
+//don`t forget to remove the console logs before the final push
+//set up the catch after axios get - then
+//check Friday`s morning challenge to place the api in a separate file
+
 import React from 'react';
 import axios from 'axios';
 import './App.scss';
-// import { BrowserRouter, Route, Link } from 'react-router-dom';
 
+import Header from './components/Header/Header';
 import Button from './components/Button/Button';
 import UserImage from './components/UserImage/UserImage';
-import InputBar from './components/InputBar/InputBar';
 import TextArea from './components/TextArea/TextArea';
+
+//remove main and side once all data is being pulled from the api, comments left
 import { mainVideo } from './data/videos/mainVideo';
 import { sideVideo } from './data/videos/sideVideo';
 import Comments from './components/Comments/Comments';
@@ -48,42 +53,35 @@ componentDidMount() {
   render() {
     return (
       <>
-        <div className="header">
-          <img className ="header__logo" src="./assets/logo/logo-brainflix.svg" alt="site logo" />
-          <InputBar />
-          <div className="header__button-image-container">
-            <Button text="UPLOAD" />
-            <UserImage className="header__user-image" imgSrc="./assets/Images/Mohan-muruge.jpg" altTxt="user" />
-          </div>
-        </div>
-
-        <div>
-            <HeroImage mainHeroVideo={this.state.mainHeroVideo}/>
-        </div>
-        
-        <div>
-          <section>
-            <HeroInfo mainHeroVideo={this.state.mainHeroVideo}/>
-          </section>
+          <Header />
 
           <div>
-            <h4>3 Comments</h4>
+              <HeroImage mainHeroVideo={this.state.mainHeroVideo}/>
+          </div>
+          
+          <div>
+            <section>
+              <HeroInfo mainHeroVideo={this.state.mainHeroVideo}/>
+            </section>
+
             <div>
-            <UserImage imgSrc="./assets/Images/Mohan-muruge.jpg" altTxt="user" />
-              <TextArea />
-              <Button text='COMMENT' />
+              <h4>3 Comments</h4>
+              <div>
+              <UserImage imgSrc="./assets/Images/Mohan-muruge.jpg" altTxt="user" />
+                <TextArea />
+                <Button text='COMMENT' />
+              </div>
+
+              <section>
+                <Comments mainHeroVideo={this.state.mainHeroVideo}/>
+              </section>
+              
             </div>
 
-            <section>
-              <Comments mainVideo={this.state.mainVideo} mainHeroVideo={this.state.mainHeroVideo}/>
-            </section>
-            
+              <h5>NEXT VIDEO</h5>
+
+              <Aside sideBarVideos={this.state.sideBarVideos} mainHeroVideo={this.state.mainHeroVideo}/>
           </div>
-
-            <h5>NEXT VIDEO</h5>
-
-            <Aside sideBarVideos={this.state.sideBarVideos} mainHeroVideo={this.state.mainHeroVideo}/>
-        </div>
       </>
     )
   }
