@@ -1,22 +1,24 @@
-//try with function component, but first try to link parent and this child properly
-
 import React from 'react';
+import Image from '../../assets/images/Mohan-muruge.jpg';
 import './Comments.scss'
 
 class Comments extends React.Component {
     render () {
-    return(
-            <div>
-                <img alt={''} />
-                <div>
+    return (
+        <div mainHeroComments={this.props.mainHeroComments}>
+            {this.props.mainHeroComments.map(item => {
+                return <div> 
+                    <img className={'user-image'} src={Image} alt={'commentator'} />
                     <div>
-                        {/* <p>{this.props.mainHeroVideo.comments[comment]}</p> */}
-                       
-                        {/* <p>{this.props.mainVideo.comments.date}</p> */}
+                        <div>
+                            <p>{item.name}</p>
+                            <p>{item.timestamp}</p>
+                        </div>
+                        <p>{item.comment}</p>
                     </div>
-                    {/* <p>{this.props.mainVideo.comments.comment}</p> */}
                 </div>
-            </div>
+            })}                                           
+        </div>
         )
     } 
 }

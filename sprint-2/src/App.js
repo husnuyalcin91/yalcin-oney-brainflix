@@ -10,10 +10,6 @@ import Header from './components/Header/Header';
 import Button from './components/Button/Button';
 import UserImage from './components/UserImage/UserImage';
 import TextArea from './components/TextArea/TextArea';
-
-//remove main and side once all data is being pulled from the api, comments left
-import { mainVideo } from './data/videos/mainVideo';
-import { sideVideo } from './data/videos/sideVideo';
 import Comments from './components/Comments/Comments';
 import Aside from './components/Aside/Aside';
 import HeroInfo from './components/HeroInfo/HeroInfo';
@@ -25,13 +21,13 @@ const url = "https://project-2-api.herokuapp.com";
 
 class App extends React.Component {
   state = {
-    mainVideo: mainVideo,
-    sideVideo: sideVideo,
+   
     sideBarVideos: [],
-    mainHeroVideo: []
+    mainHeroVideo: [],
+    mainHeroComments: []
   }
 
-//axios - get comments
+//axios get - comments
 componentDidMount() {
   axios.get(`${url}/videos?api_key=${apiKey}`)
   .then(result => {
@@ -44,17 +40,19 @@ componentDidMount() {
   axios.get(`${url}/videos/1af0jruup5gu?api_key=${apiKey}`)
   .then(response => {
     this.setState({
-      mainHeroVideo: response.data
+      mainHeroVideo: response.data,
+      mainHeroComments: response.data.comments
     });
     console.log(response.data);
   })
+
+  
 }
 
   render() {
     return (
       <>
           <Header />
-
           <div>
               <HeroImage mainHeroVideo={this.state.mainHeroVideo}/>
           </div>
@@ -73,7 +71,7 @@ componentDidMount() {
               </div>
 
               <section>
-                <Comments mainHeroVideo={this.state.mainHeroVideo}/>
+                <Comments mainHeroComments={this.state.mainHeroComments}/>
               </section>
               
             </div>

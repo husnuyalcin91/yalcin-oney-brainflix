@@ -10,9 +10,9 @@ class Header extends React.Component {
 
         return ( <div className="header">
           <Link to={`/`}> <img className ="header__logo" src="./assets/logo/logo-brainflix.svg" alt="site logo" /> </Link>
-          <InputBar />
+          <InputBar className={'header__input-bar'} placeholder={'Search'}/>
           <div className="header__button-image-container">
-            <Link to={`/upload`}> <Button text="UPLOAD" /> </Link>
+            <Link to={`/upload`}> <Button className="header__button" text="UPLOAD" /> </Link>
             <UserImage className="header__user-image" imgSrc="./assets/Images/Mohan-muruge.jpg" altTxt="user" />
           </div>
         </div>
