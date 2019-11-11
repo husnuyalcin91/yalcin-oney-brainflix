@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from '../../assets/images/Mohan-muruge.jpg';
-// import Moment from 'react-moment';
+import Moment from 'react-moment';
 import './Comments.scss'
 
 class Comments extends React.Component {
@@ -12,9 +12,8 @@ class Comments extends React.Component {
                     <img className='comment__user-image' src={Image} alt={'commentator'} />
                     <div className='comment__holder'>
                         <div className='comment__wrapper'>
-                            {/* comment__name is not used as of Nov 10 10.47 */}
-                            <p className='comment__name'>{item.name}</p>
-                            <p className='comment__date'>{item.timestamp}</p>
+                            <p>{item.name}</p>
+                            <p className='comment__date'><Moment format='MM/DD/YYYY'>{item.timestamp}</Moment></p>
                         </div>
                         <p className='comment__comment'>{item.comment}</p>
                     </div>
