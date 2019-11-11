@@ -9,25 +9,32 @@ class UploadPage extends React.Component {
     render() {
         
         return (
-            <>
-            <Header />
-            <h1>Upload Video</h1>
-            <form>
-                <img src={Image} alt="placeholder"/>
-                <div>
-                    <label>TITLE OF YOUR VIDEO</label>
-                    <InputBar placeholder={`Add a title to your video`} />
-                </div>
-                <div>
-                    <label>ADD A VIDEO DESCRIPTION</label>
-                    <InputBar placeholder={`Add a description of your video`} />
-                </div>
-                <div>
-                <Button text='CANCEL'/>
-                <Button className='header__button' text='PUBLISH' />
-                </div>
-            </form>
-            </>
+            <div className='upload'>
+                <Header />
+                <h1 className='upload__title'>Upload Video</h1>
+                <form className='upload__form'> 
+                    <div className='upload__desk-wrapper'>
+                        <div>
+                            <p className='upload__image-desc'>VIDEO THUMBNAIL</p>
+                            <img className='upload__image' src={Image} alt="placeholder"/>
+                        </div>
+                        <div className='upload__input-wrapper'>
+                            <div className='upload__video-title-container'>
+                                <p className='upload__video-title'>TITLE OF YOUR VIDEO</p>
+                                <InputBar className='upload__input-video-title' placeholder={`Add a title to your video`} />
+                            </div>
+                            <div className='upload__video-desc-container'>
+                                <p className='upload__video-desc'>ADD A VIDEO DESCRIPTION</p>
+                                <InputBar className='upload__input-video-desc' placeholder={`Add a description of your video`} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='upload__button'>
+                        <Button className='upload__publish-button' text='PUBLISH' />
+                        <Button className='upload__cancel-button' text='CANCEL'/>
+                    </div>
+                </form>
+            </div>
         )
     }
 }
