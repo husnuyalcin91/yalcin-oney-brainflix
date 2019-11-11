@@ -1,9 +1,11 @@
 @import '../../styles/base.scss';
 
-.hero-image {
-    width: 100%;
+.hero {
+    &__image {
+        width: 100%;
 
-    @include mobile() {
-        height: 183px;
+        @include mobile() {
+            height: 183px;
+        }
     }
 }

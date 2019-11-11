@@ -1,35 +1,60 @@
 @import '../../styles/base.scss';
 
 .aside {
-    @include mobile() {
-    
-    }
-
-&__image {
-    @include mobile() {
+    &__image {
+        margin-top: 16px;
         width: 120px;
         height: 70px;
     }
-}
 
-&__list-container {
-    @include mobile() {
-        display: flex;
-        flex-direction: column;
+    &__list-container {
         list-style-type: none;
-    }
-}
 
-&__wrapper {
-    @include mobile() {
-        display: flex;
-    }
-}
+        @include mobile() {
+            display: flex;
+            flex-direction: column;
+        }
 
-&__title-channel-holder {
-    @include mobile() {
-        display: flex;
-        flex-direction: column;
+        @include tablet() {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include desktop() {
+            display: flex;
+            flex-direction: column;
+        }
     }
-}
+
+    &__wrapper {
+        @include mobile() {
+            display: flex;
+        }
+
+        @include tablet() {
+            display: flex;
+        }
+
+        @include desktop() {
+            display: flex;
+        }
+    }
+
+    &__title-channel-holder {
+        margin-left: 16px;
+
+        @include mobile() {
+            font-size: $labels-text-mobile;
+        }
+
+        @include desktop() {
+            font-size: $paragraph-text-desk;
+        }
+    }
+
+    &__channel {
+        @include mobile () {
+            margin: 0;
+        }
+    }
 }

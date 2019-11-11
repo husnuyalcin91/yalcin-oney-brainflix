@@ -1,9 +1,1 @@
 @import '../../styles/base.scss';
-
-.header__input-bar {
-    @include mobile () {
-        margin: 8px 15px 0 16px;
-        border: 1px solid grey;
-        border-radius: 5px;
-    }
-}

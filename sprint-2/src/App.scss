@@ -4,3 +4,37 @@
 * {
     font-family: "Avenir-Regular";
 }
+
+.app {
+
+    &__comment-no {
+        margin-left: 16px;
+    }
+
+    &__aside-title {
+        margin-left: 16px;
+    }
+
+    &__container-aside-incl {
+        @include desktop() {
+            display: flex;
+        }
+    }
+
+    &__container-without-aside {
+        @include desktop() {
+            border-right: 1px solid grey;
+            width: 60%;
+        }
+    }
+}
+
+.header__button {
+    @include mobile () {
+        margin-top: 8px;
+        background-color: #1E90FF;
+        color: white;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+}

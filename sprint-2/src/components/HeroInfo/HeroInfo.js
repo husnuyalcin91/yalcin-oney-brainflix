@@ -3,11 +3,11 @@ import './HeroInfo.scss';
 
 const HeroInfo = (props) => {
     return (
-        <>
-            <h1>{props.mainHeroVideo.title}</h1>
-            <h4>{props.mainHeroVideo.channel} {props.mainHeroVideo.timestamp}</h4>
-            <p>{props.mainHeroVideo.description}</p>
-        </>
+        <div className='hero-info'>
+            <h1 className='hero-info__title'>{props.mainHeroVideo.title}</h1>
+            <h4 className='hero-info__channel'>{props.mainHeroVideo.channel} {props.mainHeroVideo.timestamp}</h4>
+            <p className='hero-info__description'>{props.mainHeroVideo.description}</p>
+        </div>
     )
 }
 
