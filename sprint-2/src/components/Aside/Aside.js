@@ -1,5 +1,4 @@
 import React from 'react';
-//wrap the image in a link to reroute to video details page
 import './Aside.scss';
 
 class Aside extends React.Component {

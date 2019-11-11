@@ -1,20 +1,13 @@
-//don`t forget to remove the console logs before the final push
-//set up the catch after axios get - then
-//check Friday`s morning challenge to place the api in a separate file
-
 import React from 'react';
 import axios from 'axios';
 import './App.scss';
 
 //component imports
 import Header from './components/Header/Header';
-// import Button from './components/Button/Button';
-// import UserImage from './components/UserImage/UserImage';
 import Comments from './components/Comments/Comments';
 import Aside from './components/Aside/Aside';
 import HeroInfo from './components/HeroInfo/HeroInfo';
 import HeroImage from './components/HeroImage/HeroImage'
-// import InputBar from './components/InputBar/InputBar';
 import CommentForm from './components/CommentForm/CommentForm';
 
 //axios - variables
@@ -35,7 +28,9 @@ componentDidMount() {
     this.setState({
       sideBarVideos: result.data
     });
-      console.log(result.data);
+  })
+  .catch (error => {
+    console.log(error);
   })
 
   axios.get(`${url}/videos/1af0jruup5gu?api_key=${apiKey}`)
@@ -44,7 +39,9 @@ componentDidMount() {
       mainHeroVideo: response.data,
       mainHeroComments: response.data.comments
     });
-    console.log(response.data);
+  })
+  .catch (error => {
+    console.log(error);
   })
 }
 
