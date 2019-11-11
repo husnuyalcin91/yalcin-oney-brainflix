@@ -1,0 +1,23 @@
+@import '../../styles/base.scss';
+
+.hero-info {
+    margin-left: 16px;
+
+    &__title {
+        @include mobile () {
+            
+        }
+    }
+
+    &__channel {
+        @include mobile () {
+            
+        }
+    }
+
+    &__description {
+        @include mobile () {
+
+        }
+    }
+}

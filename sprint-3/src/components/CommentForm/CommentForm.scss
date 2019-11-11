@@ -1,0 +1,76 @@
+@import '../../styles/base.scss';
+
+.form {
+    display: flex;
+
+    @include tablet() {
+        justify-content: center;
+        margin: 0 120px 24px 0;
+    }
+
+    @include desktop() {
+        margin-bottom: 24px;
+    }
+
+    &__image {
+        @include tablet() {
+
+        }
+    }
+
+    &__bar-button-container {
+        @include mobile() {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 16px;
+        }
+
+        @include tablet() {
+            display: flex;
+        }
+
+        @include desktop() {
+            display: flex;
+        }
+    }
+
+    &__bar {
+        border: 1px solid #1E90FF;
+        border-radius: 4px;
+
+        @include mobile() {
+            height: 64px;
+            width: 210px;
+        }
+
+        @include tablet() {
+            margin: 0 16px;
+            width: 440px;
+        }
+
+        @include desktop() {
+            width: 200px;
+            margin: 0 16px;
+        }
+    }
+
+    &__button {
+        background-color: #1E90FF;
+        color: white;
+        border: 1px solid;
+        border-radius: 4px;
+
+        @include mobile() {
+            margin-top: 8px;
+        }
+
+        @include tablet() {
+            width: 130px;
+        }
+
+        @include desktop() {
+            width: 120px;
+        }
+    }
+}   

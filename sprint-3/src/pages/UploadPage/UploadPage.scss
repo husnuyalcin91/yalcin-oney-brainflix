@@ -1,0 +1,211 @@
+@import '../../styles/base.scss';
+
+.upload {
+    
+   &__title {
+       @include mobile() {
+           margin-left: 16px;
+           font-size: $header-text-mobile;
+       }
+
+       @include tablet() {
+           border-bottom: 1px solid grey;
+           padding-bottom: 32px;
+           margin: 48px 16px 40px 16px; 
+           font-size: $header-one-text-desk;
+       }
+       
+       @include desktop() {
+            border-bottom: 1px solid grey;
+            padding-bottom: 32px;
+            margin: 48px 16px 40px 25px; 
+            font-size: $header-one-text-desk;
+       }
+   }
+
+   &__desk-wrapper {
+       @include desktop() {
+           display: flex;
+       }
+   }
+
+   &__image-desc {
+       @include mobile() {
+           margin-left: 16px;
+           font-size: $paragraph-text-mobile;
+           color: grey;
+       }
+
+       @include tablet() {
+            margin-left: 16px;
+            font-size: $paragraph-text-desk;
+            color: grey;
+    }
+
+        @include desktop() {
+            margin-left: 25px;
+            font-size: $paragraph-text-desk;
+            color: grey;
+    }
+   }
+   
+    &__image {
+        border-radius: 4px;
+        width: 344px;
+        height: 183px;
+
+        @include mobile() {
+            margin-left: 16px;
+            width: 288px;
+            height: 153px;
+        }
+
+        @include tablet() {
+            margin-left: 16px;
+        }
+
+        @include desktop() {
+            margin-left: 25px;
+        }
+    }
+
+    &__video-title {
+        @include mobile() {
+            margin-left: 16px;
+            font-size: $paragraph-text-mobile;
+            color: grey;
+        }
+
+        @include tablet() {
+            margin: 40px 0 0 16px;
+            font-size: $paragraph-text-desk;
+            color: grey;
+        }
+
+        @include desktop() {
+            margin-left: 25px;
+            font-size: $paragraph-text-desk;
+            color: grey;
+        }
+    }
+
+    &__input-video-title {
+        @include mobile() {
+            margin-left: 16px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            width: 288px;
+            height: 32px;
+        }
+
+        @include tablet() {
+            margin-left: 16px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            width: 90%;
+            height: 32px;
+        }
+
+        @include desktop() {
+            margin-left: 25px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            width: 200%;
+            height: 32px;
+        }
+    }
+
+    &__video-desc {
+        @include mobile() {
+            margin-left: 16px;
+            font-size: $paragraph-text-mobile;
+            color: grey;
+        }
+
+        @include tablet() {
+            margin: 24px 0 0 16px;
+            font-size: $paragraph-text-desk;
+            color: grey;
+        }
+
+        @include desktop() {
+            margin: 25px;
+            font-size: $paragraph-text-desk;
+            color: grey;
+        }
+    }
+
+    &__input-video-desc {
+        @include mobile() {
+            margin-left: 16px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            width: 288px;
+            height: 143px;
+        }
+
+        @include tablet() {
+            margin-left: 16px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            width: 90%;
+            height: 143px;
+        }
+
+        @include desktop() {
+            margin-left: 25px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            width: 200%;
+            height: 73px;
+        }
+    }
+
+    &__button {
+        @include mobile() {
+            display: flex;
+            flex-direction: column;
+            margin: 32px 0 0 16px;
+            width: 288px;
+        }
+
+        @include tablet() {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 80px 60px 0 0;
+        }
+
+        @include desktop() {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 80px 160px 0 0;
+        }
+    }
+
+    &__publish-button {
+        background-color: #1E90FF;
+        color: white;
+        border: 1px solid;
+        border-radius: 4px;
+
+        @include tablet() {
+            width: 160px;
+        }
+
+        @include desktop() {
+            width: 160px;
+        }
+    }
+
+    &__cancel-button {
+        color: #1E90FF;
+
+        @include tablet() {
+            width: 160px;
+        }
+
+        @include desktop() {
+            width: 160px;
+        }
+    }
+}
