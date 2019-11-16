@@ -21,6 +21,8 @@ class App extends React.Component {
     mainHeroComments: []
   }
 
+//mount stage
+
 //axios get - comments
 componentDidMount() {
   axios.get(`${url}/videos?api_key=${apiKey}`)
@@ -28,6 +30,7 @@ componentDidMount() {
     this.setState({
       sideBarVideos: result.data
     });
+    console.log(result.data);
   })
   .catch (error => {
     console.log(error);
@@ -39,11 +42,24 @@ componentDidMount() {
       mainHeroVideo: response.data,
       mainHeroComments: response.data.comments
     });
+    console.log(response.data);
   })
   .catch (error => {
     console.log(error);
   })
 }
+
+// update stage
+
+// componentDidUpdate() {
+//   axios.get(`${url}/videos?api_key={apiKey}`)
+//   .then(res => {
+//     console.log(res.data);
+//    this.setState({
+        
+// })
+// })    
+// }
 
   render() {
     return (

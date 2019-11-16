@@ -7,14 +7,11 @@ import * as serviceWorker from './serviceWorker';
 
 //page imports
 import UploadPage from './pages/UploadPage/UploadPage';
-import VideoDetailsPage from './pages/VideoDetailsPage/VideoDetailsPage';
-import VideoPlayerPage from './pages/VideoPlayerPage/VideoPlayerPage';
 
 ReactDOM.render(<Router>
     <Switch>
-      <Route path="/video-details/:id" component={VideoDetailsPage} />
+      <Route path="/videos/:id" component={App} />
       <Route path="/upload" component={UploadPage} />
-      <Route path="/video-player" component={VideoPlayerPage} />
       <Route path="/" component={App} />
     </Switch>
   </Router>        
