@@ -1,4 +1,4 @@
-const sideVideos = [
+module.exports = [
     {
         "id": "1af0jruup5gu",
         "title": "BMX Rampage: 2018 Highlights",
@@ -54,5 +54,3 @@ const sideVideos = [
         "image": "https://i.imgur.com/i6S8m7I.jpg"
     }
 ]
-            
-export { sideVideos };

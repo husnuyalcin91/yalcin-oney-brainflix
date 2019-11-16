@@ -14,6 +14,8 @@ import CommentForm from './components/CommentForm/CommentForm';
 const apiKey = "87c30414-6f8a-44bb-88fd-32a37998cbdd";
 const url = "https://project-2-api.herokuapp.com";
 
+//const url = 'http://localhost:8080/';
+
 class App extends React.Component {
   state = {
     sideBarVideos: [],
