@@ -1,0 +1,11 @@
+@import '../../styles/base.scss';
+
+.header__button {
+    @include mobile () {
+        margin-top: 8px;
+        background-color: #1E90FF;
+        color: white;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+}

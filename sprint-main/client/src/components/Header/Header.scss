@@ -1,0 +1,108 @@
+@import '../../styles/base.scss';
+
+.header {
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include tablet() {
+        margin-bottom: 16px;
+        margin-right: 16px;
+        display: flex;
+    }
+
+    @include desktop() {
+        display: flex;
+        margin: 16px 0;
+    }
+
+    &__logo {
+        @include tablet() {
+            margin: 20px 20px 0 26px;
+        }
+
+        @include desktop() {
+            margin: 20px 220px 0 26px;
+        }
+    }
+
+    &__input-bar {
+        border: 1px solid grey;
+
+        @include mobile() {
+            margin: 8px 15px 0 16px;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        @include tablet() {
+            margin: 8px 15px 0 16px;
+            padding-left: 24px;
+            border-radius: 4px;
+            height: 48px;
+            width: 250px;
+        }
+
+        @include desktop() {
+            margin: 8px 15px 0 16px;
+            padding-left: 24px;
+            border-radius: 4px;
+            height: 48px;
+            width: 250px;
+        }
+    }
+
+    &__button-image-container {
+        @include mobile() {
+            display: flex;
+        }
+
+        @include tablet() {
+            display: flex;
+        }
+
+        @include desktop() {
+            display: flex;
+        }
+    }
+
+    &__button {
+        @include mobile() {
+            margin-top: 8px;
+            background-color: #1E90FF;
+            color: white;
+            border: 1px solid;
+            border-radius: 5px;
+            height: 40px;
+            width: 200px;
+        }
+
+        @include tablet() {
+            background-color: #1E90FF;
+            color: white;
+            margin: 10px 0 0 24px;
+            border: 1px solid;
+            border-radius: 5px;
+            height: 48px;
+            width: 100px;
+        }
+
+        @include desktop() {
+            background-color: #1E90FF;
+            color: white;
+            margin: 10px 0 0 24px;
+            border: 1px solid;
+            border-radius: 5px;
+            height: 48px;
+            width: 100px;
+        }
+    }
+
+    &__icon {
+        @include mobile() {
+            color: white;
+        }
+    }
+}
